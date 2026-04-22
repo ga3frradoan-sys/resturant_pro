@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Meals</title>
+
+<link rel="stylesheet" href="Style.css">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="myFunctions.js"></script>
+
+</head>
+
+<body>
+
+<nav>
+  <a href="home.html">الرئيسية</a>
+  <a href="AboutUs.html">من نحن</a>
+  <a href="Meals.html">الوجبات</a>
+</nav>
+
+<h2>قائمة الوجبات</h2>
+
+<table>
+
+<tr>
+  <th>اختيار</th>
+  <th>الرمز</th>
+  <th>الاسم</th>
+  <th>السعر</th>
+  <th>التفاصيل</th>
+</tr>
+
+<tr>
+  <td><input type="checkbox" class="meal" value="110000"></td>
+  <td>SF-001</td>
+  <td>سمك مشوي</td>
+  <td>110000</td>
+  <td><button onclick="toggleDetails('d1')">إظهار</button></td>
+</tr>
+
+<tr id="d1" class="details">
+  <td colspan="5">مكونات: سمك - ليمون - زيت زيتون</td>
+</tr>
+
+<tr>
+  <td><input type="checkbox" class="meal" value="90000"></td>
+  <td>SF-002</td>
+  <td>دجاج مشوي</td>
+  <td>90000</td>
+  <td><button onclick="toggleDetails('d2')">إظهار</button></td>
+</tr>
+
+<tr id="d2" class="details">
+  <td colspan="5">مكونات: دجاج - بهارات</td>
+</tr>
+
+<tr>
+  <td><input type="checkbox" class="meal" value="80000"></td>
+  <td>SF-003</td>
+  <td>كباب</td>
+  <td>80000</td>
+  <td><button onclick="toggleDetails('d3')">إظهار</button></td>
+</tr>
+
+<tr id="d3" class="details">
+  <td colspan="5">مكونات: لحم - بصل</td>
+</tr>
+<tr>
+  <td><input type="checkbox" class="meal" value="250000"></td>
+  <td>SF-004</td>
+  <td>كوردون بلو</td>
+  <td>250000</td>
+  <td><button onclick="toggleDetails('d4')">إظهار</button></td>
+</tr>
+
+<tr id="d4" class="details">
+  <td colspan="5">مكونات: سفن فروج - صوص - فطر- موزريلا</td>
+</tr>
+<tr>
+  <td><input type="checkbox" class="meal" value="15000"></td>
+  <td>SF-005</td>
+  <td>سلطة روسية </td>
+  <td>15000</td>
+  <td><button onclick="toggleDetails('d5')">إظهار</button></td>
+</tr>
+
+<tr id="d5" class="details">
+  <td colspan="5">مكونات: ملفوف - جزر - مايونيز - كتشب</td>
+</tr>
+
+</table>
+
+<br>
+
+<button onclick="showForm()">متابعة</button>
+
+<!-- الفورم -->
+<div id="formDiv" style="display:none;">
+
+<h3>إدخال البيانات</h3>
+
+<form onsubmit="return validateForm()">
+
+<input type="text" id="name" placeholder="Full Name">
+<input type="text" id="account" placeholder="Account Number">
+<input type="date" id="date">
+<input type="text" id="phone" placeholder="Phone">
+
+<br><br>
+
+<button type="submit">إرسال</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
